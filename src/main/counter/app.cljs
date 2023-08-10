@@ -26,7 +26,7 @@
 
 (defn Application []
   [:div
-   (for [[i counter] (map vector (range)  @counters)]
+   (for [[i counter] (map vector (range) @counters)]
      ^{:key (str i)} [Counter i counter])
    [:button {:onClick (fn [] (swap! counters conj 0))} "Add counter"]])
 
